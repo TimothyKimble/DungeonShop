@@ -9,11 +9,22 @@ body {
   flex-direction: column;
   min-height: 100vh;
   background-color: $body-bg;
+  background-image: url(../img/dragonred.jpg);
+  background-position: center;
+  background-size: cover;
+  font-family: 'Petit Formal Script', cursive;
 }
 
 main {
   flex-grow: 1;
 }
 
+.cardy{
+  min-height: 35vh;
+}
 
+.cardShadows{
+  box-shadow:1px 1px 10px white;
+  
+}
 

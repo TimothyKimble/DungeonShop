@@ -8,25 +8,115 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/style/style.css">
-    <title>DungeonShop</title>
+    <title>Dungeon Shop</title>
 </head>
 
-<body>
-    <header>
-        <nav class="navbar navbar-dark navbar-expand bg-dark text-light">
-            <a class="navbar-brand" href="#">
-                <img src="assets/img/logo.png" width="45" height="45" alt="" loading="lazy">
-                <span class="ml-2">DungeonShop</span>
+<style>
+    body.debug .container,
+    body.debug .container-fluid {
+        outline: 2px double blue;
+        outline-offset: -2px;
+    }
+
+    body.debug .row {
+        outline: 2px dashed red;
+        outline-offset: -2px;
+    }
+
+    body.debug [class*="col-"] {
+        outline: 2px dotted forestgreen;
+        outline-offset: -3px;
+    }
+</style>
+
+
+<body class="debug">
+    <header class="container-fluid">
+        <nav class="row navbar navbar-dark sticky-top navbar-expand bg-dark text-light d-flex justify-content-between">
+
+
+            <a class="col-md-2 navbar-brand" href="#">
+                <img src="assets/img/d_d.png" width="45" height="45" alt="" loading="lazy">
+                <span class="">DungeonShop</span>
             </a>
+
+            <div class="col-md-6 d-flex justify-content-around align-content-center">
+                <div class="d-flex align-self-center">
+                    <button id="money">Add Money</button>
+                </div>
+                <div class="d-flex align-self-center">
+                    <h3>Wallet $<span id="wallet"></span></h3>
+                </div>
+
+            </div>
+
+            <div class="col-md-2 d-flex justify-content-center ">
+                <button class="btn btn-outline-danger"><i class="fas fa-shopping-cart fa-2x"></i></button>
+            </div>
         </nav>
     </header>
-    <main class="container">
+
+
+
+    <main class="container-fluid">
         <div id="app"></div>
+
+        <div class="row ">
+            <div class="col-md-12">
+                <h5>Your Cart</h5>
+                <ol id="cart">
+                    <li></li>
+                </ol>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-md-3 m-0 p-3">
+                <div class="cardShadows">
+                    <div class="row m-0 p-0">
+                        <div class="col-md-12 p-0"><img class="w-100" src="assets/img/magicset.jpg" alt=""></div>
+                    </div>
+                    <div
+                        class="row d-flex justify-content-center flex-column  text-center bg-dark text-light cardy m-0 p-0">
+                        <div class="col-md-12">
+                            <h4 class="shadows">Title</h4>
+                        </div>
+                        <div class="col-md-12 ">
+                            <p class="shadows">Price</p>
+                        </div>
+                        <div class="col-md-12">
+                            <p class="shadows">Description</p>
+                        </div>
+                        <div class="d-flex align-items-end">
+                            <div class="col-md-6">
+                                <p class="m-0">Stock: <span></span></p>
+                            </div>
+                            <div class="col-md-6">
+                                <button>Add Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
     </main>
+
+
+
+
+
     <footer class="bg-dark text-light">
         <div class="text-center">
-            <p><small>Made with love by Codeworks</small></p>
+            <p><small>Made with 🔥 by Codeworks</small></p>
         </div>
     </footer>
 
